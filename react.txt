@@ -1,0 +1,44 @@
+{*
+	TypesScript playground
+*}
+
+virtual dom : copy dom จริง เพื่อจัดการให้ง่ายขึ้น
+html เปลี่ยนเป็น dom(ใช้renderหน้าจอ)
+
+framework มี โครงสร้างให้แล้ว แค่เขียนตาม pather
+library ใช้จัดการสิ่งใดสิ่งหนุึ่ง
+
+imperative คุณภาพสูงกว่า declarative
+
+/* nvm [install , use] */
+
+ลง linux
+
+ยูทิ่ว คือ
+
+bank : key = uid , ...
+
+store = เก็บไฟล์ call api
+route guard = ป้องกัน route path โดยไม่ได้อนุญาต
+interceptors เตรียมตัวก่อนส่ง api ใช้แทรกก่อนส่ง api (ใช้เช็ค token)(ไม่ผ่าน = logout) (ถ้าผ่าน :set ใน header อัตโนมัต)
+side Effects ติดตามสิ่งใดสิ่งหนึ่ง
+... = ทำลายโครงสร้างตัวเก่า(นอกสุด)
+
+reducer ใช้เปลี่ยนค่า State กำหนด action
+
+นำแนะตัว : พูกชื่อเสร็จ เคยเข้าคอสร์ เรียน tailwind เคยใช้ class ประมาณนี้มา ถ้าอันนั้นไม่ยังเก่งพอ บอกว่าถ้าเข้ามาใน บ แล้ง หวังว่าพี่จะช่วยสอนให้เข้าใจมากขึ้น, pre prosent ใช้อะไร เล่าเทคนิก
+
+responsive = mobile first 
+
+carousel ทำเป็นปุ่มให้กด แล้ว index จะอยู่ตรงกลางจอ
+
+เทคนิก ถาม gpt ก่อนว่าเราสนใจอะไร
+
+รู้พื้นฐานให้มากที่สุด
+
+unit test และ test .. ต่าวๆ
+
+ตั้งเป้าหมายให้ชัดเจนก่อน
+
+เจออะไรบ้าง สม:คุยกัยใช้บ้าง: ba test ds devops \
+ctrl + D
