@@ -1,7 +1,7 @@
 // BlogDetail.tsx
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { blogs } from '../mockdata/data'; // นำเข้าข้อมูลจาก mockdata
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { blogs } from "../mockdata/data"; // นำเข้าข้อมูลจาก mockdata
 
 // Define the type for a Blog
 interface BlogData {
@@ -17,7 +17,7 @@ const BlogDetail = () => {
 
   useEffect(() => {
     if (id) {
-      const foundBlog = blogs.find(blog => blog.id === parseInt(id)); // หา Blog ตาม id
+      const foundBlog = blogs.find((blog) => blog.id === parseInt(id)); // หา Blog ตาม id
       if (foundBlog) {
         setBlog(foundBlog); // ตั้งค่าบล็อกที่พบ
       }
@@ -29,19 +29,30 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className='w-full h-screen bg-sky-50'>
-      <div className='flex justify-between items-center h-[60px] w-full px-6 bg-blue-200 text-black'>
-        <div className='bg-white w-[60px] h-[40px] flex justify-center items-center text-xl p-1 rounded-2xl'>
-          Logo
+    <div className="w-full h-screen bg-sky-50">
+      
+
+
+      {/* ส่วนเนื้อหาที่จัดให้อยู่ตรงกลาง */}
+      <div className="flex flex-col items-center justify-center w-full">
+        <div className="text-center text-4xl font-bold mt-8">{blog.title}</div>
+        
+        {/* ใช้ mx-auto เพื่อให้อยู่ตรงกลางแนวนอน และกำหนดความกว้างเป็น fixed */}
+        <div className="w-[30%] mx-auto mt-6">
+          <img
+            src={blog.imageUrl}
+            alt={blog.title}
+            className="w-full h-[350px] object-cover rounded-2xl"
+          />
+        </div>
+        
+        {/* ใช้ max-w ร่วมกับ mx-auto เพื่อกำหนดความกว้างสูงสุดและจัดให้อยู่ตรงกลาง */}
+        <div className="p-6 max-w-3xl mx-auto text-center">
+          <p className="text-xl">{blog.detail}</p>
         </div>
       </div>
-
-      <div className="text-center text-4xl font-bold mt-8">{blog.title}</div>
-      <img src={blog.imageUrl} alt={blog.title} className="w-full h-[400px] object-cover mt-6 rounded-2xl"/>
-      <div className="p-6">
-        <p className="text-xl">{blog.detail}</p>
-      </div>
     </div>
+ 
   );
 };
 
